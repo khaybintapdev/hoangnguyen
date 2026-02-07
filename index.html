@@ -1,82 +1,204 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <link rel="shortcut icon" href="public/src/img/2.jpg" />
-    <meta name="description" content="Yêu em thật không thể giải thích được, và anh không bao giờ nhìn lại, anh biết anh sẽ không là người duy nhất của em trong cuộc đời này, nhưng em là tình yêu của đời anh!">
-    <meta name="author" content="trbaonam">
-    <title>Bin và Bảo Ngọc</title>
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="expires" content="0">
-    <meta name="keywords" content="Love.trbaonam.com,Love day trbaonam, Diem ngay yeu, trbaonam.com, trbaonam diệu, Trần Bảo Nam, trbaonam, Tr Nam tv, github khaybatapdev, web khaybatapdev">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="robots" content="index, follow">
-    <meta property="og:type" content="website">
-    <!--@ IMPORT CSS @-->
-    <link rel="stylesheet" href="./public/src/css/index.css?v=2.5">
-    <!--@ FRAMEWORKS ANIMATE @-->
-    <link rel="stylesheet" href="./public/src/css/animate.min.css">
-    <meta property="og:image" content="public/src/img/2.jpg">
-    <meta property="og:description" content="Yêu em thật không thể giải thích được, và anh không bao giờ nhìn lại, anh biết anh sẽ không là người duy nhất của em trong cuộc đời này, nhưng em là tình yêu của đời anh!">
-    <meta name="theme-color" content="#00FFFF">
-  </head>
-  <body class="github-wusthanhdieu-disable">
-    <div class="popup_notify_out">
-        <div class="popup_notify">
-            <img class="head_avatar" src="public/src/img/2.jpg" style="margin: 1rem;">
-            <div class="title">Helloooo</div>
-            <div style="margin-bottom: 0.5rem;color: rgb(12 25 50 / 70%);">Yêu em thật không thể giải thích được, và anh không bao giờ nhìn lại, anh biết anh sẽ không là người duy nhất của em trong cuộc đời này, nhưng em là tình yêu của đời anh!</div>
-            <button class="close-popup">Xác nhận</button>
-        </div>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyễn Huy Hoàng | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --card:rgba(22,22,24,.85);
+      --border:rgba(255,255,255,.06);
+      --text:#ffffff;
+      --muted:#b5b5b5;
+      --accent:#f2c94c;
+      --glow:0 0 40px rgba(242,201,76,.15);
+    }
+    *{box-sizing:border-box;font-family:'Inter',system-ui,sans-serif}
+    body{
+      margin:0;
+      background:
+        radial-gradient(60% 40% at 50% 0,rgba(242,201,76,.08),transparent),
+        linear-gradient(180deg,#0e0e11,#09090b);
+      color:var(--text);
+    }
+
+    .wrap{
+      max-width:1250px;
+      margin:50px auto;
+      padding:0 20px;
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:28px;
+    }
+
+    .glass{
+      background:var(--card);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border-radius:22px;
+      border:1px solid var(--border);
+      box-shadow:0 30px 80px rgba(0,0,0,.6);
+    }
+
+    /* SIDEBAR */
+    .side{padding:22px;position:sticky;top:30px;height:fit-content}
+    .avatar{width:100%;aspect-ratio:1/1;border-radius:18px;object-fit:cover;background:#222}
+    .name{font-size:22px;font-weight:800;margin:16px 0 6px}
+    .job{display:inline-block;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.06);font-size:12px;color:#ddd}
+    .info{margin-top:20px;display:grid;gap:12px}
+    .info div{font-size:14px;color:#ddd;display:flex;gap:10px}
+    .social{display:flex;gap:12px;margin-top:18px}
+    .social a{
+      width:40px;height:40px;border-radius:12px;
+      background:rgba(255,255,255,.06);
+      display:grid;place-items:center;
+      text-decoration:none;color:#ccc;
+      transition:.3s
+    }
+    .social a:hover{background:var(--accent);color:#000;box-shadow:var(--glow)}
+
+    /* MAIN */
+    .main{padding:34px}
+    section{margin-bottom:40px}
+    h2{margin:0;font-size:30px;font-weight:800}
+    .line{width:40px;height:4px;background:var(--accent);border-radius:4px;margin:12px 0 22px}
+    p{color:#dcdcdc;line-height:1.75}
+
+    /* WHAT I DO */
+    .doing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .box{
+      padding:22px;border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      transition:.35s
+    }
+    .box:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--glow)
+    }
+    .box h3{margin:0 0 8px}
+
+    /* CLIENT SLIDER */
+    .slider{overflow:hidden;position:relative}
+    .track{
+      display:flex;gap:40px;
+      animation:scroll 25s linear infinite
+    }
+    .track img{
+      height:60px;
+      filter:grayscale(1) brightness(.9);
+      opacity:.85;
+      transition:.3s
+    }
+    .track img:hover{filter:none;opacity:1;transform:scale(1.08)}
+
+    @keyframes scroll{
+      from{transform:translateX(0)}
+      to{transform:translateX(-50%)}
+    }
+
+    /* EXPERIENCE */
+    .exp-item{
+      padding:16px 18px;
+      border-left:3px solid var(--accent);
+      margin-bottom:14px;
+      background:rgba(255,255,255,.03);
+      border-radius:12px
+    }
+
+    footer{text-align:center;opacity:.6;margin:40px 0}
+
+    @media(max-width:900px){
+      .wrap{grid-template-columns:1fr}
+      .doing{grid-template-columns:1fr}
+      .side{position:relative}
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- SIDEBAR -->
+  <aside class="glass side">
+    <img class="avatar" src="avatar.png" alt="Avatar">
+    <div class="name">Nguyễn Huy Hoàng</div>
+    <span class="job">Video Editor / Designer / Content Creator</span>
+
+    <div class="info">
+      <div>📧 hoangnguyeneditor@gmail.com</div>
+      <div>📞 0877 780 114</div>
+      <div>🎂 16/01/2005</div>
+      <div>📍 Hà Tĩnh, Việt Nam</div>
     </div>
-    <div class="bg-wrap">
-      <div class="bg-img">
-        <div class="central central-6">
-        <div class="flex-col-c p-b-50">
-        <div class="flex-w1 flex-c cd100 p-b-65">
-            <div class="flex-col-c-m size2 how-countdown">
-                <span class="l1-txt3 p-b-9 days" id="wus-ngay">00</span>
-                <span class="s1-txt1">Ngày</span>
-            </div>
-            <div class="flex-col-c-m size2 how-countdown">
-                <span class="l1-txt3 p-b-9 hours" id="wus-gio">00</span>
-                <span class="s1-txt1">Giờ</span>
-            </div>
-            <div class="flex-col-c-m size2 how-countdown">
-                <span class="l1-txt3 p-b-9 minutes" id="wus-phut">00</span>
-                <span class="s1-txt1">Phút</span>
-            </div>
-            <div class="flex-col-c-m size2 how-countdown">
-                <span class="l1-txt3 p-b-9 seconds" id="wus-giay">00</span>
-                <span class="s1-txt1">Giây</span>
-            </div>
-        </div>
+
+    <div class="social">
+      <a href="https://www.facebook.com/xiaoykeditor" title="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@HoangNguyen.Editor" title="YouTube">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-2-1-2.5-1.1C16.6 2.5 12 2.5 12 2.5h0s-4.6 0-8.1.3c-.5.1-1.6.2-2.5 1.1-.7.7-.9 2.3-.9 2.3S0 8.1 0 10v2c0 1.9.5 3.8.5 3.8s.2 1.6.9 2.3c.9.9 2.1.9 2.6 1 1.9.2 8 .3 8 .3s4.6 0 8.1-.3c.5-.1 1.6-.2 2.5-1.1.7-.7.9-2.3.9-2.3s.5-1.9.5-3.8v-2c0-1.9-.5-3.8-.5-3.8zM9.6 14.5v-5l4.8 2.5-4.8 2.5z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/hnguyeneditor/" title="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/></svg>
+      </a>
+      <a href="#" title="TikTok">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 8v3a7 7 0 0 1-4-1.2v6.6a5.4 5.4 0 1 1-4.7-5.4v3.1a2.3 2.3 0 1 0 1.7 2.2V2h3a5 5 0 0 0 4 3z"/></svg>
+      </a>
     </div>
-        <!-- <div class="middle animated bounce Blurkg"> -->
-          <div class="middle animated">
-            <div class="img-male">
-              <img src="./public/src/img/bin.jpg" alt="Thanh Diệu">
-              <span>Binnnn</span>
-            </div>
-            <div class="heart"></div>
-            <div class="img-female">
-              <img src="./public/src/img/bngoc.jpg" alt="My Love">
-              <span>Bngocccc</span>
-            </div>
-          </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="glass main">
+
+    <section>
+      <h2>About Me</h2>
+      <div class="line"></div>
+      <p>Xin chào, tôi là HoangNguyen – một video editor đang sinh sống và làm việc tại thành phố Hà Tĩnh.</p>
+      <p>Tôi có cơ hội hợp tác với nhiều đối tác truyền thông hàng đầu tại Việt Nam như <b>MEME Media</b>, <b>CT Media</b>, <b>AIR Media</b>. Mỗi dự án là một trải nghiệm đáng quý giúp tôi hoàn thiện kỹ năng và khẳng định phong cách sáng tạo riêng.</p>
+    </section>
+
+    <section>
+      <h2>What I'm Doing</h2>
+      <div class="line"></div>
+      <div class="doing">
+        <div class="box"><h3>Video Editor</h3><p>The most modern and high-quality design made at a professional level.</p></div>
+        <div class="box"><h3>Content Creator</h3><p>High-quality development of sites at the professional level.</p></div>
+        <div class="box"><h3>Designer</h3><p>Professional development of applications for iOS and Android.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Clients</h2>
+      <div class="line"></div>
+      <div class="slider">
+        <div class="track">
+          <img src="logo1.png">
+          <img src="logo2.png">
+          <img src="logo3.png">
+          <img src="logo1.png">
+          <img src="logo2.png">
+          <img src="logo3.png">
         </div>
       </div>
-    </div>
-    <div class="anime-cb">
-      <img src="./public/src/img/running-love.gif" alt="Love Animation">
-    </div>
-     <!--@ FRAMEWORKS LIBRARYS @-->
-    <script src="./public/src/jquery/jquery.min.js"></script>
-    <script src="./public/src/js/jquery.pjax.js"></script>
-    <!--@ INDEX JS @-->
-    <script src="./public/src/js/love.main.js?v=2.5"></script>
-    <script src="//thanhdieu.com/files/loader-screen.js?v=2" defer></script>
-  </body>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="line"></div>
+      <div class="exp-item"><b>MEME MEDIA</b><br>Project Editor, Quản lý dự án</div>
+      <div class="exp-item"><b>AIR MEDIA</b><br>Project Editor</div>
+      <div class="exp-item"><b>CT MEDIA</b><br>Project Editor</div>
+    </section>
+
+  </main>
+</div>
+
+<footer>Dev By Khaybintapdev</footer>
+
+</body>
 </html>
